@@ -10,7 +10,7 @@ class BatchSystemHandler:
     The BatchSystemHandler class
     This class will transform a batch of objects (list[sl.ObjectsBatch]) from batching system into a queue/stream of sl.Objects.
     This class also handles pose of the camera in order to retrieve the pose of the camera at the object timestamp (obviously in the past).
-    If WITH_IMAGE_RETENTION parameter is set to True, the images/depth/point cloud will be stored via the push() and pop() synchronized to the data.
+    If WITH_IMAGE_RETENTION parameter is set to True, the images/depth/point cloud will be stored via the push() and pop() synchonized to the data.
     
     Note that image retention consumes a lot of CPU and GPU memory since we need to store them in memory so that we can output them later.
     As an example, for a latency of 2s, it consumes between 500Mb and 1Gb of memory for CPU and same for GPU. Make sure you have enought space left on memory.

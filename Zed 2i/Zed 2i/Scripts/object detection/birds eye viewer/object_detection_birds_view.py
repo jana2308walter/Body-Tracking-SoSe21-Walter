@@ -28,8 +28,8 @@ import numpy as np
 import cv2
 import pyzed.sl as sl
 
-from ogl_viewer import viewer as gl
-from cv_viewer import tracking_viewer as cv_viewer
+import ogl_viewer.viewer as gl
+import cv_viewer.tracking_viewer as cv_viewer
 from batch_system_handler import *
 
 

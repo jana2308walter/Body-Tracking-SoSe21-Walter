@@ -23,10 +23,12 @@
     in an OpenGL window
 """
 import sys
-from ogl_viewer import viewer as gl
+import ogl_viewer.viewer as gl
 import pyzed.sl as sl
 
 if __name__ == "__main__":
+    print("Running object detection ... Press 'Esc' to quit")
+
     # Create a Camera object
     zed = sl.Camera()
 
@@ -50,7 +52,6 @@ if __name__ == "__main__":
     # Open the camera
     err = zed.open(init_params)
     if err != sl.ERROR_CODE.SUCCESS:
-        print("Error while opening the camera")
         exit(1)
 
     # Enable object detection module
